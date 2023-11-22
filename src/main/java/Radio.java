@@ -1,13 +1,20 @@
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+
 public class Radio {
     private int currentStation;
     private int currentVolume;
     private int numberOfStations = 10;
     private int maxStation = numberOfStations - 1;
+    private int newNumberOfStations;
 
-    public Radio() {
-
-    }
-
+    /*public Radio() {
+    }*/
     public Radio(int newNumberOfStations) {
         numberOfStations = newNumberOfStations;
         maxStation = numberOfStations - 1;
